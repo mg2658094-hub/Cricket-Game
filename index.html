@@ -1,52 +1,105 @@
-                                         
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+  <!-- Page title shown in the browser tab -->
   <title>Cricket Game</title>
+
+  <!-- Connect the external CSS file -->
   <link rel="stylesheet" href="style.css">
 
-
 </head>
+
 <body>
+
+  <!-- Main heading of the game -->
   <h1>Bat Ball Stump Game</h1>
 
-<button class="choice-button" onclick="
-  let computerChoice = generateComputerChoice();
-  let resultMsg = getResult('Bat', computerChoice)
-  showResult('Bat', computerChoice, resultMsg) "
->
- <img src="Images/Ball.png" alt="Bat Image" class="choice-image">
-</button>
+
+  <!-- =========================================
+       BAT CHOICE BUTTON
+       User clicks this button to choose Bat
+       ========================================= -->
+  <button class="choice-button" onclick="
+    let computerChoice = generateComputerChoice();
+    let resultMsg = getResult('Bat', computerChoice)
+    showResult('Bat', computerChoice, resultMsg)
+  ">
+
+    <!-- Image displayed for the Bat choice -->
+    <img src="Images/Ball.png" alt="Bat Image" class="choice-image">
+
+  </button>
 
 
-<button class="choice-button" onclick="
- computerChoice = generateComputerChoice();
- resultMsg = getResult('Ball', computerChoice)
- showResult('Ball', computerChoice, resultMsg) "
->
- <img src="Images/Bat.png" alt="Bat Image" class="choice-image">
-</button>
+  <!-- =========================================
+       BALL CHOICE BUTTON
+       User clicks this button to choose Ball
+       ========================================= -->
+  <button class="choice-button" onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Ball', computerChoice)
+    showResult('Ball', computerChoice, resultMsg)
+  ">
+
+    <!-- Image displayed for the Ball choice -->
+    <img src="Images/Bat.png" alt="Bat Image" class="choice-image">
+
+  </button>
 
 
-<button class="choice-button" onclick="
- computerChoice = generateComputerChoice();
- resultMsg = getResult('Stump', computerChoice)
- showResult('Stump', computerChoice, resultMsg)"
->
- <img src="Images/Stump.png" alt="Bat Image" class="choice-image">
-</button>
+  <!-- =========================================
+       STUMP CHOICE BUTTON
+       User clicks this button to choose Stump
+       ========================================= -->
+  <button class="choice-button" onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Stump', computerChoice)
+    showResult('Stump', computerChoice, resultMsg)"
+  >
 
- 
-<h3 id="user-move"></h3>
-<h3 id="computer-move"></h3>
-<h3 id="result"></h3>
-<h3 id="score"></h3>
+    <!-- Image displayed for the Stump choice -->
+    <img src="Images/Stump.png" alt="Bat Image" class="choice-image">
 
-<button id="button" onclick="localStorage.clear()
-resetScore();
-">⟳ Reset Game</button>
+  </button>
 
 
-<script src="script.js"></script>
+  <!-- =========================================
+       GAME RESULT SECTION
+       These headings display:
+       1. User's choice
+       2. Computer's choice
+       3. Game result
+       4. Current score
+       ========================================= -->
+
+  <!-- Displays the user's selected move -->
+  <h3 id="user-move"></h3>
+
+  <!-- Displays the computer's selected move -->
+  <h3 id="computer-move"></h3>
+
+  <!-- Displays Win, Lose or Tie result -->
+  <h3 id="result"></h3>
+
+  <!-- Displays the current game score -->
+  <h3 id="score"></h3>
+
+
+  <!-- =========================================
+       RESET GAME BUTTON
+       Clears saved data and resets the score
+       ========================================= -->
+  <button id="button" onclick="
+    localStorage.clear()
+    resetScore();
+  ">⟳ Reset Game</button>
+
+
+  <!-- Connect the external JavaScript file -->
+  <script src="script.js"></script>
+
 </body>
+
 </html>
