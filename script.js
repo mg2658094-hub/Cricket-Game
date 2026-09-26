@@ -9,16 +9,6 @@ let scoreStr = localStorage.getItem('score');
     tie: 0,
   };
 
-// Means :  if (scoreStr) {
-//               score = JSON.parse(scoreStr);
-//          } else {
-//              score = 
-//                      {
-//                  win: 0,
-//                  lost: 0,
-//                  tie: 0 
-//                       };
-//                 };
 
  score.displayScore = function(){
   return `Won: ${score.win}, Lost: ${score.lost}, Tie: ${score.tie}`;
@@ -46,8 +36,6 @@ function generateComputerChoice(){
 function getResult(userChoice, computerChoice){
   if(userChoice === "Bat"){
         if (computerChoice === 'Ball'){
-          // score.win = score.win + 1
-          // score.win += 1
           score.win++;
           return 'User won';
         }else if (computerChoice === 'Bat'){
