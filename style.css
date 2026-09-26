@@ -1,0 +1,75 @@
+*{
+  border: none;
+}
+
+body{
+    background-color: #1C2D43;
+    text-align: center;
+    color: white;
+    /* font-family: 'Segoe UI', sans-serif; */
+    margin: 0;
+    padding-top: 91px;
+}
+
+h1{
+    color: #ffb347;
+    font-size: 45px;
+    text-shadow: 3px 3px 10px black;
+    margin-bottom: 30px;
+}
+
+.choice-button{
+    width: 130px;
+    height: 130px;
+    margin: 15px;
+    border-radius: 27%;
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    cursor: pointer;
+} 
+
+.choice-button:hover{
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.25);
+}
+
+.choice-image{
+    height: 80px;
+}
+
+#user-move,
+#computer-move{
+    color: #87CEFA;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+#result{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #00ff88;
+}
+
+#score{
+    font-size: 22px;
+}
+
+
+#button{
+    margin-top: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+}
+
+#button:active{
+    transform: scale(0.95);
+}
