@@ -6,6 +6,9 @@
   <!-- Page title shown in the browser tab -->
   <title>Cricket Game</title>
 
+  <!-- Make the webpage responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Connect the external CSS file -->
   <link rel="stylesheet" href="style.css">
 
@@ -28,7 +31,7 @@
   ">
 
     <!-- Image displayed for the Bat choice -->
-    <img src="Images/Ball.png" alt="Bat Image" class="choice-image">
+    <img src="Images/Ball.png" alt="Ball Image" class="choice-image">
 
   </button>
 
@@ -56,11 +59,11 @@
   <button class="choice-button" onclick="
     computerChoice = generateComputerChoice();
     resultMsg = getResult('Stump', computerChoice)
-    showResult('Stump', computerChoice, resultMsg)"
-  >
+    showResult('Stump', computerChoice, resultMsg)
+  ">
 
     <!-- Image displayed for the Stump choice -->
-    <img src="Images/Stump.png" alt="Bat Image" class="choice-image">
+    <img src="Images/Stump.png" alt="Stump Image" class="choice-image">
 
   </button>
 

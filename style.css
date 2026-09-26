@@ -73,7 +73,7 @@ h1{
     /* Change the mouse pointer to a hand */
     cursor: pointer;
 
-} 
+}
 
 
 /* Apply this style when the mouse moves over the button */
@@ -184,5 +184,69 @@ h1{
 
     /* Make the button slightly smaller when clicked */
     transform: scale(0.95);
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   For mobile devices
+   ========================================= */
+
+@media (max-width: 600px){
+
+    /* Reduce top spacing on small screens */
+    body{
+        padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    /* Make heading smaller on mobile */
+    h1{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+
+    /* Make choice buttons smaller on mobile */
+    .choice-button{
+        width: 90px;
+        height: 90px;
+        margin: 8px;
+    }
+
+
+    /* Make choice images smaller on mobile */
+    .choice-image{
+        height: 55px;
+    }
+
+
+    /* Make user and computer text smaller */
+    #user-move,
+    #computer-move{
+        font-size: 18px;
+    }
+
+
+    /* Make result text smaller */
+    #result{
+        font-size: 21px;
+    }
+
+
+    /* Make score text smaller */
+    #score{
+        font-size: 18px;
+    }
+
+
+    /* Make reset button smaller */
+    #button{
+        font-size: 17px;
+        margin-top: 20px;
+    }
 
 }
