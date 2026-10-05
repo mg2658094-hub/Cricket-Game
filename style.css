@@ -1,252 +1,115 @@
-/* Apply this rule to all HTML elements */
-*{
-
-  /* Remove the default border from all elements */
+* {
   border: none;
-
 }
 
-
-/* Style the main body of the webpage */
-body{
-
-    /* Set the background color of the webpage */
-    background-color: #1C2D43;
-
-    /* Keep all text/content centered */
-    text-align: center;
-
-    /* Set the default text color to white */
-    color: white;
-
-    /* Set the font of the webpage */
-    /* font-family: 'Segoe UI', sans-serif; */
-
-    /* Remove default space outside the body */
-    margin: 0;
-
-    /* Add space at the top of the webpage */
-    padding-top: 91px;
-
+body {
+  background-color: #1c2d43;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding-top: 91px;
 }
 
-
-/* Style the main heading */
-h1{
-
-    /* Set the heading text color */
-    color: #ffb347;
-
-    /* Make the heading bigger */
-    font-size: 45px;
-
-    /* Add shadow behind the heading */
-    text-shadow: 3px 3px 10px black;
-
-    /* Add space below the heading */
-    margin-bottom: 30px;
-
+h1 {
+  color: #ffb347;
+  font-size: 45px;
+  text-shadow: 3px 3px 10px black;
+  margin-bottom: 30px;
 }
 
-
-/* Style the buttons used for Bat, Ball and Stump */
-.choice-button{
-
-    /* Set the button width */
-    width: 130px;
-
-    /* Set the button height */
-    height: 130px;
-
-    /* Add space around each button */
-    margin: 15px;
-
-    /* Make the button corners rounded */
-    border-radius: 27%;
-
-    /* Give the button a transparent background */
-    background: rgba(255,255,255,0.15);
-
-    /* Add a shadow around the button */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-
-    /* Change the mouse pointer to a hand */
-    cursor: pointer;
-
+.choice-button {
+  width: 130px;
+  height: 130px;
+  margin: 15px;
+  border-radius: 27%;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
-
-/* Apply this style when the mouse moves over the button */
-.choice-button:hover{
-
-    /* Make the button slightly bigger */
-    transform: scale(1.1);
-
-    /* Make the background slightly brighter */
-    background: rgba(255,255,255,0.25);
-
+.choice-button:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.25);
 }
 
-
-/* Set the size of the images inside the buttons */
-.choice-image{
-
-    /* Set the image height */
-    height: 80px;
-
+.choice-image {
+  height: 80px;
 }
 
-
-/* Style the user's move and computer's move */
 #user-move,
-#computer-move{
+#computer-move {
+  color: #87cefa;
+  font-size: 22px;
+  margin-top: 20px;
+}
 
-    /* Set the text color */
-    color: #87CEFA;
+#result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #00ff88;
+}
 
-    /* Set the text size */
-    font-size: 22px;
+#score {
+  font-size: 22px;
+}
 
-    /* Add space above the text */
+#button {
+  margin-top: 30px;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+  letter-spacing: 1px;
+}
+
+#button:active {
+  transform: scale(0.95);
+}
+
+/* Adjust the layout and sizing for mobile screens. */
+@media (max-width: 600px) {
+  body {
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .choice-button {
+    width: 90px;
+    height: 90px;
+    margin: 8px;
+  }
+
+  .choice-image {
+    height: 55px;
+  }
+
+  #user-move,
+  #computer-move {
+    font-size: 18px;
+  }
+
+  #result {
+    font-size: 21px;
+  }
+
+  #score {
+    font-size: 18px;
+  }
+
+  #button {
+    font-size: 17px;
     margin-top: 20px;
-
-}
-
-
-/* Style the game result */
-#result{
-
-    /* Set the result text size */
-    font-size: 25px;
-
-    /* Make the result text bold */
-    font-weight: bold;
-
-    /* Add space above the result */
-    margin-top: 20px;
-
-    /* Set the result text color */
-    color: #00ff88;
-
-}
-
-
-/* Style the score text */
-#score{
-
-    /* Set the score text size */
-    font-size: 22px;
-
-}
-
-
-/* Style the Reset button */
-#button{
-
-    /* Add space above the button */
-    margin-top: 30px;
-
-    /* Add space inside the button */
-    padding: 10px 15px;
-
-    /* Set the button text size */
-    font-size: 20px;
-
-    /* Make the button text bold */
-    font-weight: bold;
-
-    /* Set the button text color */
-    color: white;
-
-    /* Add a gradient background */
-    background: linear-gradient(135deg, #ff512f, #dd2476);
-
-    /* Make the button corners completely rounded */
-    border-radius: 50px;
-
-    /* Change the mouse pointer to a hand */
-    cursor: pointer;
-
-    /* Add a shadow around the button */
-    box-shadow: 0 6px 25px rgba(0,0,0,0.5);
-
-    /* Make changes happen smoothly */
-    transition: all 0.5s ease;
-
-    /* Add space between letters */
-    letter-spacing: 1px;
-
-}
-
-
-/* Apply this style when the Reset button is clicked */
-#button:active{
-
-    /* Make the button slightly smaller when clicked */
-    transform: scale(0.95);
-
-}
-
-
-/* =========================================
-   RESPONSIVE DESIGN
-   For mobile devices
-   ========================================= */
-
-@media (max-width: 600px){
-
-    /* Reduce top spacing on small screens */
-    body{
-        padding-top: 40px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-
-    /* Make heading smaller on mobile */
-    h1{
-        font-size: 32px;
-        margin-bottom: 20px;
-    }
-
-
-    /* Make choice buttons smaller on mobile */
-    .choice-button{
-        width: 90px;
-        height: 90px;
-        margin: 8px;
-    }
-
-
-    /* Make choice images smaller on mobile */
-    .choice-image{
-        height: 55px;
-    }
-
-
-    /* Make user and computer text smaller */
-    #user-move,
-    #computer-move{
-        font-size: 18px;
-    }
-
-
-    /* Make result text smaller */
-    #result{
-        font-size: 21px;
-    }
-
-
-    /* Make score text smaller */
-    #score{
-        font-size: 18px;
-    }
-
-
-    /* Make reset button smaller */
-    #button{
-        font-size: 17px;
-        margin-top: 20px;
-    }
-
+  }
 }

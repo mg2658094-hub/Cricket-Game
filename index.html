@@ -1,108 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>Cricket Game</title>
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Page title shown in the browser tab -->
-  <title>Cricket Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <!-- Make the webpage responsive on mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body>
+    <h1>Bat Ball Stump Game</h1>
 
-  <!-- Connect the external CSS file -->
-  <link rel="stylesheet" href="style.css">
+    <button
+      class="choice-button"
+      onclick="
+        let computerChoice = generateComputerChoice();
+        let resultMsg = getResult('Bat', computerChoice);
+        showResult('Bat', computerChoice, resultMsg);
+      "
+    >
+      <img src="Images/Ball.png" alt="Ball Image" class="choice-image" />
+    </button>
 
-</head>
+    <button
+      class="choice-button"
+      onclick="
+        computerChoice = generateComputerChoice();
+        resultMsg = getResult('Ball', computerChoice);
+        showResult('Ball', computerChoice, resultMsg);
+      "
+    >
+      <img src="Images/Bat.png" alt="Bat Image" class="choice-image" />
+    </button>
 
-<body>
+    <button
+      class="choice-button"
+      onclick="
+        computerChoice = generateComputerChoice();
+        resultMsg = getResult('Stump', computerChoice);
+        showResult('Stump', computerChoice, resultMsg);
+      "
+    >
+      <img src="Images/Stump.png" alt="Stump Image" class="choice-image" />
+    </button>
 
-  <!-- Main heading of the game -->
-  <h1>Bat Ball Stump Game</h1>
+    <h3 id="user-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
 
+    <button
+      id="button"
+      onclick="
+        localStorage.clear();
+        resetScore();
+      "
+    >
+      ⟳ Reset Game
+    </button>
 
-  <!-- =========================================
-       BAT CHOICE BUTTON
-       User clicks this button to choose Bat
-       ========================================= -->
-  <button class="choice-button" onclick="
-    let computerChoice = generateComputerChoice();
-    let resultMsg = getResult('Bat', computerChoice)
-    showResult('Bat', computerChoice, resultMsg)
-  ">
-
-    <!-- Image displayed for the Bat choice -->
-    <img src="Images/Ball.png" alt="Ball Image" class="choice-image">
-
-  </button>
-
-
-  <!-- =========================================
-       BALL CHOICE BUTTON
-       User clicks this button to choose Ball
-       ========================================= -->
-  <button class="choice-button" onclick="
-    computerChoice = generateComputerChoice();
-    resultMsg = getResult('Ball', computerChoice)
-    showResult('Ball', computerChoice, resultMsg)
-  ">
-
-    <!-- Image displayed for the Ball choice -->
-    <img src="Images/Bat.png" alt="Bat Image" class="choice-image">
-
-  </button>
-
-
-  <!-- =========================================
-       STUMP CHOICE BUTTON
-       User clicks this button to choose Stump
-       ========================================= -->
-  <button class="choice-button" onclick="
-    computerChoice = generateComputerChoice();
-    resultMsg = getResult('Stump', computerChoice)
-    showResult('Stump', computerChoice, resultMsg)
-  ">
-
-    <!-- Image displayed for the Stump choice -->
-    <img src="Images/Stump.png" alt="Stump Image" class="choice-image">
-
-  </button>
-
-
-  <!-- =========================================
-       GAME RESULT SECTION
-       These headings display:
-       1. User's choice
-       2. Computer's choice
-       3. Game result
-       4. Current score
-       ========================================= -->
-
-  <!-- Displays the user's selected move -->
-  <h3 id="user-move"></h3>
-
-  <!-- Displays the computer's selected move -->
-  <h3 id="computer-move"></h3>
-
-  <!-- Displays Win, Lose or Tie result -->
-  <h3 id="result"></h3>
-
-  <!-- Displays the current game score -->
-  <h3 id="score"></h3>
-
-
-  <!-- =========================================
-       RESET GAME BUTTON
-       Clears saved data and resets the score
-       ========================================= -->
-  <button id="button" onclick="
-    localStorage.clear()
-    resetScore();
-  ">⟳ Reset Game</button>
-
-
-  <!-- Connect the external JavaScript file -->
-  <script src="script.js"></script>
-
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
