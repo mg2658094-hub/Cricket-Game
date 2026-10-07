@@ -1,5 +1,7 @@
 * {
-  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,14 +19,20 @@ h1 {
   margin-bottom: 30px;
 }
 
+/* Game choice buttons */
 .choice-button {
   width: 130px;
   height: 130px;
   margin: 15px;
+  border: none;
   border-radius: 27%;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .choice-button:hover {
@@ -32,8 +40,19 @@ h1 {
   background: rgba(255, 255, 255, 0.25);
 }
 
+/* Remove focus and tap outlines on mobile */
+.choice-button:focus,
+.choice-button:focus-visible,
+.choice-button:active {
+  outline: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
 .choice-image {
   height: 80px;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 #user-move,
@@ -54,6 +73,7 @@ h1 {
   font-size: 22px;
 }
 
+/* Reset game button */
 #button {
   margin-top: 30px;
   padding: 10px 15px;
@@ -61,18 +81,26 @@ h1 {
   font-weight: bold;
   color: white;
   background: linear-gradient(135deg, #ff512f, #dd2476);
+  border: none;
   border-radius: 50px;
   cursor: pointer;
+  outline: none;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease;
   letter-spacing: 1px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#button:focus,
+#button:focus-visible {
+  outline: none;
 }
 
 #button:active {
   transform: scale(0.95);
 }
 
-/* Adjust the layout and sizing for mobile screens. */
+/* Responsive layout for mobile screens */
 @media (max-width: 600px) {
   body {
     padding-top: 40px;
